@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+void menu(){
+    cout << "Bem vindo ao CATA ASTERISCO" << endl << endl;
+    cout << "Escolha o modo de jogo" << endl;
+    cout << "1. Normal" << endl;
+    cout << "2. Cooperativo" << endl;
+}
+int main(){
+    int modo, objetivo;
+    bool validade, validadeo;
+    menu();
+    while(validade == false){
+        cout << "digite o modo: " << endl << endl;
+        cin >> modo;
+            if(modo == 2){
+                validade = true;
+                cout << "Modo escolhido: " << modo << endl << endl;
+            }else if(modo == 1){
+                validade = true;
+                cout << "Modo escolhido: " << modo << endl;
+            }else {
+                cout << "modo invalido, selecione novamente" << endl;
+            }
+    }
+    while(validadeo == false){
+        if(modo == 1){
+            cout << "selecione o objetivo: " << endl;
+            cout << "1. ganhar 10 pontos" << endl;
+            cout << "2. ganhar 20 pontos" << endl;
+            cout << "3. jogar ate perder" << endl;
+            cin >> objetivo;
+            if(objetivo == 1){
+                validadeo = true;
+                cout << "objetivo 1 selecionado" << endl;
+            }else if(objetivo == 2){
+                validadeo == true;
+                cout << "obtejivo 2 selecionado" << endl;
+            }else if(objetivo == 3){
+                validade == true;
+                cout << "objetivo 3 selecionado" << endl;
+            }else cout << "objetivo invalido, selecione novamente" << endl;
+        }
+    }
+}
