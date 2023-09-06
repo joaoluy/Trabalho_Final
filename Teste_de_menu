@@ -5,7 +5,7 @@ void menu(){
     cout << "Bem vindo ao CATA ASTERISCO" << endl << endl;
     cout << "Escolha o modo de jogo" << endl;
     cout << "1. Normal" << endl;
-    cout << "2. Cooperativo" << endl;
+    cout << "2. Versus" << endl;
 }
 void obj1(){
     cout << "selecione o objetivo: " << endl;
@@ -15,9 +15,9 @@ void obj1(){
 }
 void obj2(){
     cout << "selecione o objetivo: " << endl;
-    cout << "1. ganhar 20 pontos" << endl;
-    cout << "2. ganhar 40 pontos" << endl;
-    cout << "3. jogar ate perder" << endl;
+    cout << "1. quem coletar 20 asteriscos primeiro ganha" << endl;
+    cout << "2. quem coletar 40 asteriscos primeiro ganha" << endl;
+    cout << "3. quem deixar um asterisco cair um perde o jogo" << endl;
 }
 int main(){
     int modo, objetivo;
@@ -28,10 +28,10 @@ int main(){
         cin >> modo;
             if(modo == 2){
                 validade = true;
-                cout << "Modo escolhido: " << modo << endl << endl;
+                cout << "Modo escolhido: Versus" << endl << endl;
             }else if(modo == 1){
                 validade = true;
-                cout << "Modo escolhido: " << modo << endl;
+                cout << "Modo escolhido: Normal" << endl;
             }else {
                 cout << "modo invalido, selecione novamente" << endl;
             }
