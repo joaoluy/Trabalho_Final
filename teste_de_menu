@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+void menu(){
+    cout << "Bem vindo ao CATA ASTERISCO" << endl << endl;
+    cout << "Escolha o modo de jogo" << endl;
+    cout << "1. Normal" << endl;
+    cout << "2. Cooperativo" << endl;
+}
+int main(){
+    int modo;
+    bool validade;
+    menu();
+    cout << "digite o modo: ";
+    cin >> modo;
+    if(modo != 2){
+        cout << "Modo invalido, digite novamente" << endl;
+        cin >> modo;
+    }else if(modo != 1){
+        cout << "Modo invalido, digite novamente" << endl;
+        cin >> modo;
+    }else
+    cout << "Modo escolhido: " << modo << endl;
+}
