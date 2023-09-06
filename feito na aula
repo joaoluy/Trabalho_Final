@@ -30,14 +30,17 @@ int main(){
         cin >> modo;
             if(modo == 2){
                 validade = true;
+                system("clear||cls");
                 cout << "Modo escolhido: Versus" << endl;
-                clrscr();
             }else if(modo == 1){
                 validade = true;
+                system("clear||cls");
                 cout << "Modo escolhido: Normal" << endl;
             }else {
+                system("clear||cls");
                 cout << "modo invalido \nselecione novamente" << endl;
-            }
+                cout << "1. Normal" << endl;
+                cout << "2. Versus" << endl;
     }
         if(modo == 1){
             while(validadeo == false){
