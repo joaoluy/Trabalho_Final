@@ -7,6 +7,18 @@ void menu(){
     cout << "1. Normal" << endl;
     cout << "2. Cooperativo" << endl;
 }
+void obj1(){
+    cout << "selecione o objetivo: " << endl;
+    cout << "1. ganhar 10 pontos" << endl;
+    cout << "2. ganhar 20 pontos" << endl;
+    cout << "3. jogar ate perder" << endl;
+}
+void obj2(){
+    cout << "selecione o objetivo: " << endl;
+    cout << "1. ganhar 20 pontos" << endl;
+    cout << "2. ganhar 40 pontos" << endl;
+    cout << "3. jogar ate perder" << endl;
+}
 int main(){
     int modo, objetivo;
     bool validade, validadeo;
@@ -26,10 +38,7 @@ int main(){
     }
         if(modo == 1){
             while(validadeo == false){
-                cout << "selecione o objetivo: " << endl;
-                cout << "1. ganhar 10 pontos" << endl;
-                cout << "2. ganhar 20 pontos" << endl;
-                cout << "3. jogar ate perder" << endl;
+                obj1();
                 cin >> objetivo;
                 if(objetivo == 1){
                     validadeo = true;
@@ -45,10 +54,7 @@ int main(){
             }
                 if(modo == 2){
             while(validadeo == false){
-                cout << "selecione o objetivo: " << endl;
-                cout << "1. ganhar 20 pontos" << endl;
-                cout << "2. ganhar 40 pontos" << endl;
-                cout << "3. jogar ate perderem" << endl;
+                obj2();
                 cin >> objetivo;
                 if(objetivo == 1){
                     validadeo = true;
