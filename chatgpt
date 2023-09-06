@@ -1,0 +1,85 @@
+#include <iostream>
+#include <conio.h>
+#include <windows.h>
+
+using namespace std;
+
+const int telaLargura = 20;
+const int telaAltura = 10;
+const char jogador = '@';
+const char objeto = '*';
+
+int jogadorX, objetoX, objetoY;
+bool gameOver;
+
+void Setup() {
+    gameOver = false;
+    jogadorX = telaLargura / 2;
+    objetoX = rand() % telaLargura;
+    objetoY = 0;
+}
+
+void Desenha() {
+    system("cls");
+    for (int i = 0; i < telaLargura + 2; i++)
+        cout << "#";
+    cout << endl;
+
+    for (int i = 0; i < telaAltura; i++) {
+        for (int j = 0; j < telaLargura; j++) {
+            if (j == 0)
+                cout << "#";
+            if (i == jogadorX && j == jogador)
+                cout << jogador;
+            else if (i == objetoY && j == objetoX)
+                cout << objeto;
+            else
+                cout << " ";
+            if (j == telaLargura - 1)
+                cout << "#";
+        }
+        cout << endl;
+    }
+
+    for (int i = 0; i < telaLargura + 2; i++)
+        cout << "#";
+    cout << endl;
+}
+
+void Input() {
+    if (_kbhit()) {
+        switch (_getch()) {
+        case 'a':
+            jogadorX--;
+            break;
+        case 'd':
+            jogadorX++;
+            break;
+        case 'q':
+            gameOver = true;
+            break;
+        }
+    }
+}
+
+void Logic() {
+    objetoY++;
+
+    if (objetoY == telaAltura)
+        objetoY = 0;
+
+    if (objetoY == jogadorX && objetoX == jogador) {
+        gameOver = true;
+    }
+}
+
+int main() {
+    Setup();
+    while (!gameOver) {
+        Desenha();
+        Input();
+        Logic();
+        Sleep(10);
+    }
+    return 0;
+}
