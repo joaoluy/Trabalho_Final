@@ -64,17 +64,21 @@ int main(){
                 cin >> objetivo;
                 if(objetivo == 1){
                     validadeo = true;
+                    system("clear||cls");
                     cout << "objetivo 1 selecionado" << endl;
                     break;
                 }else if(objetivo == 2){
                     validadeo == true;
+                    system("clear||cls");
                     cout << "obtejivo 2 selecionado" << endl;
                     break;
                 }else if(objetivo == 3){
                     validade == true;
+                    system("clear||cls");
                     cout << "objetivo 3 selecionado" << endl;
                     break;
                 }else cout << "objetivo invalido, selecione novamente" << endl;
         }
             }
+}
 }
