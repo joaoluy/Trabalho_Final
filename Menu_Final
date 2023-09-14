@@ -8,18 +8,18 @@ void obj1();
 void obj2();
 
 int main(){
-    int modo, objetivo;
+    char modo, objetivo;
     bool validade = false, validadeo = false;
     system("clear||cls");
     menu();
     while(validade == false){
         cout << "digite o modo: " << endl;
         cin >> modo;
-            if(modo == 2){
+            if(modo == '2'){
                 validade = true;
                 system("clear||cls");
                 cout << "Modo escolhido: Versus" << endl;
-            }else if(modo == 1){
+            }else if(modo == '1'){
                 validade = true;
                 system("clear||cls");
                 cout << "Modo escolhido: Normal" << endl;
@@ -30,21 +30,21 @@ int main(){
                 cout << "2. Versus" << endl;
             }
     }
-        if(modo == 1){
+        if(modo == '1'){
             obj1();
             while(validadeo == false){
                 cin >> objetivo;
-                if(objetivo == 1){
+                if(objetivo == '1'){
                     validadeo = true;
                     system("clear||cls");
                     cout << "Modo de jogo normal, objetivo 1 selecionado" << endl;
                     break;
-                }else if(objetivo == 2){
+                }else if(objetivo == '2'){
                     validadeo == true;
                     system("clear||cls");
                     cout << "Modo de jogo normal, obtejivo 2 selecionado" << endl;
                     break;
-                }else if(objetivo == 3){
+                }else if(objetivo == '3'){
                     validade == true;
                     system("clear||cls");
                     cout << "Modo de jogo normal, objetivo 3 selecionado" << endl;
@@ -56,22 +56,22 @@ int main(){
                       cout << "3. jogar ate perder" << endl;
             }
         }
-                if(modo == 2){
+                if(modo == '2'){
                     obj2();
             while(validadeo == false){
                 cout << "Qual sera o seu objetivo?" << endl;
                 cin >> objetivo;
-                if(objetivo == 1){
+                if(objetivo == '1'){
                     validadeo = true;
                     system("clear||cls");
                     cout << "Modo de jogo versus, objetivo 1 selecionado" << endl;
                     break;
-                }else if(objetivo == 2){
+                }else if(objetivo == '2'){
                     validadeo == true;
                     system("clear||cls");
                     cout << "Modo de jogo versus, obtejivo 2 selecionado" << endl;
                     break;
-                }else if(objetivo == 3){
+                }else if(objetivo == '3'){
                     validade == true;
                     system("clear||cls");
                     cout << "Modo de jogo versus, objetivo 3 selecionado" << endl;
