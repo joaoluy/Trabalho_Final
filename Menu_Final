@@ -1,0 +1,104 @@
+#include <iostream>
+#include <stdlib.h>
+#include <conio.h>
+using namespace std;
+
+void menu();
+void obj1();
+void obj2();
+
+int main(){
+    int modo, objetivo;
+    bool validade = false, validadeo = false;
+    system("clear||cls");
+    menu();
+    while(validade == false){
+        cout << "digite o modo: " << endl;
+        cin >> modo;
+            if(modo == 2){
+                validade = true;
+                system("clear||cls");
+                cout << "Modo escolhido: Versus" << endl;
+            }else if(modo == 1){
+                validade = true;
+                system("clear||cls");
+                cout << "Modo escolhido: Normal" << endl;
+            }else {
+                system("clear||cls");
+                cout << "Modo invalido \nselecione novamente" << endl;
+                cout << "1. Normal" << endl;
+                cout << "2. Versus" << endl;
+            }
+    }
+        if(modo == 1){
+            obj1();
+            while(validadeo == false){
+                cin >> objetivo;
+                if(objetivo == 1){
+                    validadeo = true;
+                    system("clear||cls");
+                    cout << "Modo de jogo normal, objetivo 1 selecionado" << endl;
+                    break;
+                }else if(objetivo == 2){
+                    validadeo == true;
+                    system("clear||cls");
+                    cout << "Modo de jogo normal, obtejivo 2 selecionado" << endl;
+                    break;
+                }else if(objetivo == 3){
+                    validade == true;
+                    system("clear||cls");
+                    cout << "Modo de jogo normal, objetivo 3 selecionado" << endl;
+                    break;
+                }else system("clear||cls");
+                      cout << "objetivo invalido, selecione novamente" << endl;
+                      cout << "1. ganhar 10 pontos" << endl;
+                      cout << "2. ganhar 20 pontos" << endl;
+                      cout << "3. jogar ate perder" << endl;
+            }
+        }
+                if(modo == 2){
+                    obj2();
+            while(validadeo == false){
+                cout << "Qual sera o seu objetivo?" << endl;
+                cin >> objetivo;
+                if(objetivo == 1){
+                    validadeo = true;
+                    system("clear||cls");
+                    cout << "Modo de jogo versus, objetivo 1 selecionado" << endl;
+                    break;
+                }else if(objetivo == 2){
+                    validadeo == true;
+                    system("clear||cls");
+                    cout << "Modo de jogo versus, obtejivo 2 selecionado" << endl;
+                    break;
+                }else if(objetivo == 3){
+                    validade == true;
+                    system("clear||cls");
+                    cout << "Modo de jogo versus, objetivo 3 selecionado" << endl;
+                    break;
+                }else system("clear||cls");
+                      cout << "objetivo invalido, selecione novamente" << endl;
+                      cout << "1. quem coletar 20 asteriscos primeiro ganha" << endl;
+                      cout << "2. quem coletar 40 asteriscos primeiro ganha" << endl;
+                      cout << "3. quem deixar um asterisco cair um perde o jogo" << endl;
+            }
+                }
+}
+void menu(){
+    cout << "Bem vindo ao CATA ASTERISCO" << endl << endl;
+    cout << "Escolha o modo de jogo" << endl;
+    cout << "1. Normal" << endl;
+    cout << "2. Versus" << endl;
+}
+void obj1(){
+    cout << "selecione o objetivo: " << endl;
+    cout << "1. ganhar 10 pontos" << endl;
+    cout << "2. ganhar 20 pontos" << endl;
+    cout << "3. jogar ate perder" << endl;
+}
+void obj2(){
+    cout << "selecione o objetivo: " << endl;
+    cout << "1. quem coletar 20 asteriscos primeiro ganha" << endl;
+    cout << "2. quem coletar 40 asteriscos primeiro ganha" << endl;
+    cout << "3. quem deixar um asterisco cair um perde o jogo" << endl;
+}
