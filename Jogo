@@ -1,0 +1,43 @@
+#include <iostream>
+#include <ctime>
+#include <conio.h>
+using namespace std;
+#define T 10
+#define M 5
+
+int main(){
+    srand(time(NULL));
+    const char* player[M] = {0};
+    const char* mapa[T][M] = {0};
+    signed char a,d;
+
+    for(int i = 0; i < 4; i++){
+        player[i] = " ";
+    }
+        for(int i=0; i<T; i++){
+            for(int p=0; p<M;p++){
+                mapa[i][p] = "*";
+            }
+        }
+        for(int i=0; i<10; i++){
+            for(int p=0; p<5;p++){
+                cout << mapa[i][p];
+            }
+            cout << endl;
+        }
+        cout << player[0];
+        if(cin >> a){
+            player[0] = " ";
+            player[4] = "_";
+        for(int i=0; i<10; i++){
+            for(int p=0; p<5;p++){
+                cout << mapa[i][p];
+                cout << player[i];
+            }
+            cout << endl;
+        }
+        for(int i=0;i<4;i++){
+            cout << player[i];
+        }
+        }
+}
