@@ -1,0 +1,68 @@
+#include <iostream>
+#include <ctime>
+#include <conio.h>
+#include <windows.h>
+using namespace std;
+#define L 9
+#define C 5
+
+int X = 2;
+int tecla;
+int getch();
+const char* mapa[L][C];
+void Tecla(){
+    tecla = getch();
+    cin >> tecla;
+        switch(tecla){
+            case 'a':
+                X--;
+                break;
+            case 'd':
+                X++;
+                break;
+        }
+    }
+void MAPA(){
+        system("clear||cls");
+        for(int i=0; i<L+1; i++){
+            for(int p=0; p<C;p++){
+                cout << mapa[i][p];
+            }
+            cout << endl;
+        }
+}
+
+int main(){
+    srand(time(NULL));
+    int pontos;
+    signed char a,d;
+    bool vitoria = false;
+        for(int i=0; i<9; i++){
+            for(int p=0; p<5;p++){
+                mapa[i][p] = "*";
+            }
+            mapa[9][i] = " ";
+            mapa[9][X] = "U";
+        }
+            MAPA();
+
+    tecla = getch();
+    cin >> tecla;
+        switch(tecla){
+            case 'a':
+                X--;
+                break;
+            case 'd':
+                X++;
+                break;
+        }
+        mapa[9][X];
+        system("clear||cls");
+        for(int i=0; i<L+1; i++){
+            for(int p=0; p<C;p++){
+                cout << mapa[i][p];
+            }
+            cout << endl;
+        }
+
+}
