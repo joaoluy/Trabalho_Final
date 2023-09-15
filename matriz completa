@@ -1,0 +1,49 @@
+#include <iostream>
+#include <ctime>
+#include <conio.h>
+#include <windows.h>
+using namespace std;
+#define L 11
+#define C 5
+
+int X = 2;
+int tecla;
+const char* mapa[L][C];
+void Tecla(){
+    tecla = getch();
+        switch(tecla){
+            case 'a':
+                X--;
+                break;
+            case 'd':
+                X++;
+                break;
+        }
+}
+
+
+int main(){
+    srand(time(NULL));
+    signed char a,d;
+    bool vitoria = false;
+        for(int i=0; i<9; i++){
+            for(int p=0; p<5;p++){
+                mapa[i][p] = "*";
+            }
+        }
+        if(vitoria == true){
+            cout << "voce ganhou";
+        }else
+        mapa[L][X] = "_";
+
+        for(int i=0; i<L+1; i++){
+            for(int p=0; p<C;p++){
+                cout << mapa[i][p];
+            }
+            cout << endl;
+        }
+        cout << mapa[L][X];
+        Tecla();
+        if(tecla == 'a'){
+        }
+}
