@@ -1,0 +1,112 @@
+#include <iostream>
+#include <stdlib.h>
+#include <conio.h>
+#include <windows.h>
+using namespace std;
+
+void menu();
+void obj1();
+void obj2();
+
+int main(){
+    char modo, objetivo;
+    bool validade = false, validadeo = false;
+    system("clear||cls");
+    menu();
+    while(validade == false){
+        cout << "digite o modo: " << endl;
+        modo = _getch();
+        cin >> modo;
+            if(modo == '2'){
+                validade = true;
+                system("clear||cls");
+                cout << "Modo escolhido: Fuga" << endl;
+            }else if(modo == '1'){
+                validade = true;
+                system("clear||cls");
+                cout << "Modo escolhido: Classico" << endl;
+            }else {
+                system("clear||cls");
+                cout << "Modo invalido \nselecione novamente" << endl;
+                cout << "1. Classico (cata asterisco)" << endl;
+                cout << "2. Fuga (foge dos asteriscos)" << endl;
+            }
+    }
+        if(modo == '1'){
+            obj1();
+            while(validadeo == false){
+                cin >> objetivo;
+                if(objetivo == '1'){
+                    validadeo = true;
+                    system("clear||cls");
+                    cout << "Modo de jogo Classico" << endl << "obtejivo 1 selecionado" << endl << "Boa Sorte";
+                    Sleep(1000);
+                    break;
+                }else if(objetivo == '2'){
+                    validadeo == true;
+                    system("clear||cls");
+                    cout << "Modo de jogo Classico" << endl << "obtejivo 2 selecionado" << endl << "Boa Sorte";
+                    Sleep(1000);
+                    break;
+                }else if(objetivo == '3'){
+                    validade == true;
+                    system("clear||cls");
+                    cout << "Modo de jogo Classico" << endl << "objetivo 3 selecionado" << endl << "Boa Sorte";
+                    Sleep(1000);
+                    break;
+                }else system("clear||cls");
+                      cout << "objetivo invalido, selecione novamente" << endl;
+                      cout << "1. ganhar 10 pontos" << endl;
+                      cout << "2. ganhar 20 pontos" << endl;
+                      cout << "3. jogar ate perder" << endl;
+            }
+        }
+                if(modo == '2'){
+                    obj2();
+            while(validadeo == false){
+                cout << "Selecione a dificuldade:" << endl;
+                cin >> objetivo;
+                if(objetivo == '1'){
+                    validadeo = true;
+                    system("clear||cls");
+                    cout << "Modo de jogo Fuga" << endl << "Dificuldade: Facil" << endl << "Boa Sorte";
+                    Sleep(1000);
+                    break;
+                }else if(objetivo == '2'){
+                    validadeo == true;
+                    system("clear||cls");
+                    cout << "Modo de jogo Fuga" << endl << "Dificuldade: Medio" << endl << "Boa Sorte";
+                    Sleep(1000);
+                    break;
+                }else if(objetivo == '3'){
+                    validade == true;
+                    system("clear||cls");
+                    cout << "Modo de jogo Fuga" << endl << "Dificuldade: Dificil" << endl << "Boa Sorte";
+                    Sleep(1000);
+                    break;
+                }else system("clear||cls");
+                      cout << "objetivo invalido, selecione novamente" << endl;
+                      cout << "1. Facil, (5 vidas)" << endl;
+                      cout << "2. Medio, (3 vidas)" << endl;
+                      cout << "3. Dificil (1 vida)" << endl;
+            }
+                }
+}
+void menu(){
+    cout << "Bem vindo ao CATA ASTERISCO" << endl << endl;
+    cout << "Escolha o modo de jogo" << endl;
+    cout << "1. Classico  (cata asterisco)" << endl;
+    cout << "2. Fuga  (foge dos asteriscos)" << endl;
+}
+void obj1(){
+    cout << "selecione o Objetivo: " << endl;
+    cout << "1. ganhar 10 pontos" << endl;
+    cout << "2. ganhar 20 pontos" << endl;
+    cout << "3. jogar ate perder" << endl;
+}
+void obj2(){
+    cout << "selecione a Dificuldade: " << endl;
+    cout << "1. Facil (5 vidas)" << endl;
+    cout << "2. Medio (3 vidas)" << endl;
+    cout << "3. Dificil (1 vida)" << endl;
+}
